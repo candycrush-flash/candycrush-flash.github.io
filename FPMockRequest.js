@@ -2,6 +2,7 @@ var currentProfile = parseInt(localStorage.getItem('selectedProfile')) || 1;
 
 let loadedLevels = {};
 let gameModesPerLevel = [];
+let sugarTrackLevels = { featureActive: true, newAdventureIsActive: true, sweetMemoryLevels: [] };
 
 function decodeParams(params) {
 	let decoded = {};
@@ -631,6 +632,10 @@ window.MockRequest = function(url, params) {
 			case "./sugartrackapi/syncSugarTrack": {
 				break;
 			}
+			case "./sugartrackapi/getSugarTrackLevels": {
+				result = sugarTrackLevels;
+				break;
+			}
 			default: {
 				//console.log(url, decoded)
 			}
@@ -775,3 +780,9 @@ fetch('./candycrushapi/getGameModePerLevel').then(res => res.json().then(json =>
 	alert(lang == 'ko' ? '레벨 데이타를 불러오지 못했습니다' : 'Failed to load level data!');
 	// history.go(0);
 });
+
+/*
+fetch('./sugartrackapi/getSugarTrackLevels').then(res => res.json().then(json => {
+	sugarTrackLevels = json;
+})).catch(e => {});
+*/
