@@ -626,11 +626,9 @@ window.MockRequest = function(url, params) {
 				break;
 			}
 			case "./sugartrackapi/syncSugarTrackOnGameEnd": {
-				alert(decoded.arg0);
 				break;
 			}
 			case "./sugartrackapi/syncSugarTrack": {
-				result = 5;
 				break;
 			}
 			default: {
