@@ -3,21 +3,20 @@ var cdnHostName = '.';
 
 var imageResourcesJson = '{';
 
-for (var dirName in imageResourceHashes) {
+for(var dirName in imageResourceHashes) {
 	var fileHashes = imageResourceHashes[dirName];
-	for (var resourceName in fileHashes) {
+	for(var resourceName in fileHashes)
 		imageResourcesJson = imageResourcesJson.concat('"', dirName, resourceName, '":"', cdnHostName, dirName, resourceName,'", ');
-	}
 }
 imageResourcesJson = imageResourcesJson.concat('"d":"d"}');
 var sagaImagesMap = eval('(' + imageResourcesJson + ')');
 
-window.getAbTestCase = function (key) {
+window.getAbTestCase = function getAbTestCase(key) {
 	var abTestMap = {"MobilePayment":0,"ccsx_heal_time":0,"ccsc_liveops_golden_level":1,"ccsm_unlimited_life_campaign_final":0,"ccsx_smart_fishes":1,"ccsc_visible_collab_unlock_time":1,"ccsc_html5_client":2,"ccsc_time_limited_extra_moves":1,"ccsc_booster_wheel_alternate":0,"ccsx_episode_cap":0,"ccsc_me_button_notification":0,"ccsx_respend_offer_booster":0,"ccsc_liveops":0,"ccsc_dynamic_sales":0,"ccsx_ufo_activation_on_seeding":1,"ccsx_opengraph_behaviour":0,"ccsx_alt_colorbomb_wrapped":0,"ccsx_sugar_track":3,"ccsx_moonstruck_booster":1,"ccsx_bonus_offer_syn":1,"ccsc_smart_ufo":1,"ccsx_hard_levels_part2":1,"ccsc_xmas_card":0,"ccsc_conversion_offer_unlimited_life":1,"ccsc_liveops_wild_treasure":1,"ccsx_unlimited_life_forever":0,"ccsc_liveops_custom":0,"ccsc_booster_wheel_2":0,"ccsx_ticket_quest":0,"ccsc_conversion_offer_v2":0,"ccsc_select_all_preselected":1,"ccsx_semi_smart_fish":1,"ccsx_vanity_items":1,"ccsc_soda_portal":2,"ccsx_recommended_level_seeds":0,"ccsx_hard_level":1,"Funometer":0,"ccsx_booster_striped_brush":1};
 	return abTestMap[key] || 0;
 };
 
-window.getGameConfigurationUrlForSection = function(sectionId) {
+window.getGameConfigurationUrlForSection = function getGameConfigurationUrlForSection(sectionId) {
 	var urlMap = {"1":"./resources/game-configurations1.json?_v=3v2tjj","2":"./resources/game-configurations2.json?_v=tjqgoj","3":"./resources/game-configurations3.json?_v=1mj200q","4":"./resources/game-configurations4.json?_v=1i0ey1z","5":"./resources/game-configurations5.json?_v=65o5i6","6":"./resources/game-configurations6.json?_v=6wmifl","7":"./resources/game-configurations7.json?_v=19clg9x","8":"./resources/game-configurations8.json?_v=1mfi48i","9":"./resources/game-configurations9.json?_v=1gtblo0","10":"./resources/game-configurations10.json?_v=gscrua","11":"./resources/game-configurations11.json?_v=l9nd3b","12":"./resources/game-configurations12.json?_v=1r0oepw","13":"./resources/game-configurations13.json?_v=1e7il8v","14":"./resources/game-configurations14.json?_v=uoxi17","15":"./resources/game-configurations15.json?_v=1t3jbdw","16":"./resources/game-configurations16.json?_v=upvm9j","17":"./resources/game-configurations17.json?_v=14rn2vz","18":"./resources/game-configurations18.json?_v=1ainzbo","19":"./resources/game-configurations19.json?_v=19ib803","20":"./resources/game-configurations20.json?_v=1b7e5lq","21":"./resources/game-configurations21.json?_v=1l0s2r5","22":"./resources/game-configurations22.json?_v=52bsq","23":"./resources/game-configurations23.json?_v=bhop59","24":"./resources/game-configurations24.json?_v=2m37c5","25":"./resources/game-configurations25.json?_v=p9poq6","26":"./resources/game-configurations26.json?_v=1mk80bc","27":"./resources/game-configurations27.json?_v=159o4r","28":"./resources/game-configurations28.json?_v=130rpmw","29":"./resources/game-configurations29.json?_v=7kworm","30":"./resources/game-configurations30.json?_v=15ds90n","31":"./resources/game-configurations31.json?_v=ob5ut7","32":"./resources/game-configurations32.json?_v=9spqe8","33":"./resources/game-configurations33.json?_v=1btfycm","34":"./resources/game-configurations34.json?_v=1tloz6g","35":"./resources/game-configurations35.json?_v=1r8elf2","36":"./resources/game-configurations36.json?_v=h4a7j3","37":"./resources/game-configurations37.json?_v=g4jfjl","38":"./resources/game-configurations38.json?_v=2a1qde","39":"./resources/game-configurations39.json?_v=cy08gq","40":"./resources/game-configurations40.json?_v=hdn3ht","41":"./resources/game-configurations41.json?_v=1g0a3lp","42":"./resources/game-configurations42.json?_v=1stj7bz","43":"./resources/game-configurations43.json?_v=rclks7","44":"./resources/game-configurations44.json?_v=g3b5lu","45":"./resources/game-configurations45.json?_v=1ja8szi","46":"./resources/game-configurations46.json?_v=58vsgx","47":"./resources/game-configurations47.json?_v=13gviod","48":"./resources/game-configurations48.json?_v=dqh9bl","1201":"./resources/game-configurations1201.json?_v=xe8wl0","49":"./resources/game-configurations49.json?_v=mqfufn","50":"./resources/game-configurations50.json?_v=hga6ji","1202":"./resources/game-configurations1202.json?_v=15hw34z","51":"./resources/game-configurations51.json?_v=1dd47ks","1203":"./resources/game-configurations1203.json?_v=l5yo9s","1204":"./resources/game-configurations1204.json?_v=eoptt1","52":"./resources/game-configurations52.json?_v=1ga8kd4","1205":"./resources/game-configurations1205.json?_v=1nprkkb","53":"./resources/game-configurations53.json?_v=1p7s8sy","54":"./resources/game-configurations54.json?_v=1n4skb1","1206":"./resources/game-configurations1206.json?_v=142001e","1207":"./resources/game-configurations1207.json?_v=gfy4tu","55":"./resources/game-configurations55.json?_v=p9t5ws","56":"./resources/game-configurations56.json?_v=1lfmgzv","1208":"./resources/game-configurations1208.json?_v=bfxpmj","57":"./resources/game-configurations57.json?_v=drkzgv","58":"./resources/game-configurations58.json?_v=1hwhiih"};
 	return urlMap[sectionId];
 };
@@ -30,8 +29,8 @@ function showGame() {
 		"lifeWithPurchaseEndTime": 1442278000,
 		"movesWithPurchaseEndTime": 1442279000,
 		"vanityItemsActive": false,
-		"vanityItemsBoosterWheelEndTime": 0,
-		"vanityItemsPurchaseEndTime": 0,
+		"vanityItemsBoosterWheelEndTime": 2147483647,
+		"vanityItemsPurchaseEndTime": 2147483647,
 		"wheelActive": isWheelActive(), // TODO - ADD CODE THAT SETS THIS TO TRUE EVERY DAY.
 		"paidBoosterWheelJackpotPrize": 0,
 		"guiTrackingEnabled": false,
@@ -71,8 +70,8 @@ function showGame() {
 		"sugarTrackAvailable": false,
 		"candyKitchenAvailable": true,
 		"redoGetBalanceKillswitch": false,
-		"debugMode": true,
-		"logUncaughtClientErrors": true,
+		"debugMode": ((localStorage.getItem('debug_' + getProfile()) || '1') != '0'),
+		"logUncaughtClientErrors": false,
 		"texts": lang.texts,
 		"currentServerTime": Math.round(new Date().getTime() / 1000),
 		"html5UpdateUrl": "",

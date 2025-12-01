@@ -3,14 +3,14 @@ var enTexts = "{\"preloader_loading_part1_message\":\"Adding frosting\",\"preloa
 window.languages = {
 	en: {
 		display: 'English',
-		font: 'DefaultFonts',
+		// font: 'DefaultFonts',
 		pageFont: 'Tahoma',
 		pageFontSize: '8',
 		language: 'en',
 		locale: 'en_US',
 		title: 'Candy Crush Saga',
 		ui: {
-			UNLOCK_LEVEL_PROMPT: 'Unlock levels until what level? (2825) This action is irreversible.',
+			UNLOCK_LEVEL_PROMPT: 'Unlock levels until what level? (1 to 2825) This action is irreversible.',
 			CHARGE_LIVES_PROMPT: 'Charge all the hearts?',
 			EXTEND_LIVES_PROMPT: 'Enter the maximum number of hearts.',
 			ENTER_PROFILE_NAME: 'Enter the name of the profile',
@@ -21,7 +21,7 @@ window.languages = {
 			IMPORT_ALREADY_EXISTS: 'That name already exists. Enter a new name or leave it blank to overwrite',
 			PROFILE_NOT_FOUND: 'Profile not found',
 			COPY_PROFILE_DATA: 'Copy the exported data',
-			BOOSTER_LIST: 'Enter the booster you want in number: \n1. UFO\n2. Stripe brush\n3. Bubblegum troll\n4. Sweet teeth\n5. Joker\n6. Striped and wrapped candies\n7. Anti peppar\n8. Free switch\n9. Coconut wheel\n10. Jelly fish\n11. Lollipop hammer\n12. Extra moves\n13. Color bomb\n14. Extra time',
+			BOOSTER_LIST: 'Enter the booster you want in number: \n1. UFO\n2. Stripe brush\n3. Bubblegum troll\n4. Sweet teeth\n5. Joker\n6. Striped and wrapped candies\n7. Bomb cooler\n8. Free switch\n9. Coconut wheel\n10. Jelly fish\n11. Lollipop hammer\n12. Extra moves\n13. Color bomb\n14. Extra time',
 			BOOSTER_AMOUNT_PROMPT: 'How many do you want? (Enter negative to remove)',
 			GOLDBAR_AMOUNT_PROMPT: 'Enter the number of gold bars to add to your bank (Enter negative to decrease them)',
 			SWITCH_PROFILES: 'Switch Profiles',
@@ -43,11 +43,17 @@ window.languages = {
 			DELETE_PROFILE_CONFIRM: 'Delete current profile? You will lose all your progress.',
 			RESET_WHEEL: 'Reset roulette time',
 			RESET_WHEEL_CONFIRM: 'Are you sure you want to reset the roulette so you can spin it again now?',
+			ENABLE_DEBUG: 'Enable debug mode',
+			DISABLE_DEBUG: 'Disable debug mode',
+			ENABLE_INFINITE_LIVES: 'Prevent spending lifes',
+			DISABLE_INFINITE_LIVES: 'Enable spending lifes',
+			ENABLE_INFINITE_ITEMS: 'Prevent spending boosters',
+			DISABLE_INFINITE_ITEMS: 'Enable spending boosters',
 		}
 	},
 	ko: {
 		display: '한국어',
-		font: 'KoreanFonts',
+		// font: 'KoreanFonts',
 		pageFont: '\'굴림\', Gulim',
 		pageFontSize: '9',
 		language: 'ko',
@@ -65,7 +71,7 @@ window.languages = {
 			IMPORT_ALREADY_EXISTS: '이미 존재하는 이름입니다. 새 이름을 입력하거나 덮어쓰려면 비워두십시오',
 			PROFILE_NOT_FOUND: '프로필이 존재하지 않습니다',
 			COPY_PROFILE_DATA: '내보낸 프로필 데이타를 복사하십시오',
-			BOOSTER_LIST: '부스터의 번호를 입력하십시오. \n1. UFO\n2. 줄무늬 브러쉬\n3. 버블껌 트롤\n4. 달콤한 이빨\n5. 조커\n6. 줄무늬 캔디와 포장 캔디\n7. 안티 페퍼\n8. 맘대로 바꾸기\n9. 코코넛 휠\n10. 젤리 물고기\n11. 롤리팝 해머\n12. 추가 이동 횟수\n13. 컬러 폭탄\n14. 추가 시간',
+			BOOSTER_LIST: '부스터의 번호를 입력하십시오. \n1. UFO\n2. 줄무늬 브러쉬\n3. 버블껌 트롤\n4. 달콤한 이빨\n5. 조커\n6. 줄무늬 캔디와 포장 캔디\n7. 폭탄 쿨러\n8. 맘대로 바꾸기\n9. 코코넛 휠\n10. 젤리 물고기\n11. 롤리팝 해머\n12. 추가 이동 횟수\n13. 컬러 폭탄\n14. 추가 시간',
 			BOOSTER_AMOUNT_PROMPT: '추가할 부스터의 개수를 입력하십시오 (음수로 제거)',
 			GOLDBAR_AMOUNT_PROMPT: '추가할 골드 바의 수를 입력하십시오 (음수로 제거)',
 			SWITCH_PROFILES: '프로필 전환',
@@ -87,6 +93,12 @@ window.languages = {
 			DELETE_PROFILE_CONFIRM: '프로필을 삭제하시겠습니까? 게임 진행 상황이 삭제됩니다',
 			RESET_WHEEL: '룰렛 날짜 초기화',
 			RESET_WHEEL_CONFIRM: '룰렛 날짜를 초기화하여 지금 다시 돌릴 수 있게 하시겠습니까?',
+			ENABLE_DEBUG: '디버그 모드 켜기',
+			DISABLE_DEBUG: '디버그 모드 끄기',
+			ENABLE_INFINITE_LIVES: '하트 소모하지 않기',
+			DISABLE_INFINITE_LIVES: '하트 소모 허용',
+			ENABLE_INFINITE_ITEMS: '부스터 소모하지 않기',
+			DISABLE_INFINITE_ITEMS: '부스터 소모 허용',
 		}
 	},
 	zh: {
@@ -135,7 +147,7 @@ window.languages = {
 	},
 	ja: {
 		display: '日本語',
-		font: 'JapaneseFonts',
+		// font: 'JapaneseFonts',
 		pageFont: 'undefined',
 		pageFontSize: '9',
 		language: 'ja',
@@ -179,7 +191,7 @@ window.languages = {
 	},
 	ru: {
 		display: 'Русский',
-		font: 'RussianFonts',
+		// font: 'RussianFonts',
 		pageFont: 'undefined',
 		pageFontSize: '9',
 		language: 'ru',
@@ -223,7 +235,7 @@ window.languages = {
 	},
 	es: {
 		display: 'Español',
-		font: 'DefaultFonts',
+		// font: 'DefaultFonts',
 		pageFont: 'undefined',
 		pageFontSize: '9',
 		language: 'es',
@@ -275,8 +287,8 @@ function getLanguage() {
 
 function getString(key) {
 	var lang = window.languages[getLanguage()];
-	if(!lang) return key;
-	return window.languages[getLanguage()].ui[key] || window.languages.en.ui[key] || key;
+	if(!lang) return window.languages.en.ui[key] || key;
+	return lang.ui[key] || window.languages.en.ui[key] || key;
 }
 
 function initStrings() {
@@ -293,7 +305,7 @@ function initStrings() {
 	});
 	
 	var style = document.getElementById('pageStyle');
-	style.innerHTML += 'body { font-family: ' + lang.pageFont + '; } dl dd li { font-size: ' + lang.pageFontSize + 'pt; }'
+	style.innerHTML += 'body { font-family: ' + lang.pageFont + '; } dl dd li { font-size: ' + lang.pageFontSize + 'pt; }';
 }
 
 function setLanguage(lang) {
@@ -313,19 +325,16 @@ function loadLanguages() {
 }
 
 function generateTexts(lang) {
-	if(lang == 'en') {
-		window.languages.en.texts = enTexts;
-		return;
-	}
+	if(lang == 'en')
+		return (window.languages.en.texts = enTexts);
 	var texts = JSON.parse(enTexts);
-	for(var key in texts) {
+	for(var key in texts)
 		texts[key] = window.gameInitStringsList[lang]['candycrush.candycrush'][key];
-	}
 	window.languages[lang].texts = JSON.stringify(texts);
 }
 
 window.lang = getLanguage();
-document.title = window.languages[getLanguage()]?.title || 'Candy Crush Saga';
+document.title = window.languages[window.lang]?.title || 'Candy Crush Saga';
 window.gameInitStrings = window.gameInitStringsList[window.lang];
 generateTexts(window.lang);
 

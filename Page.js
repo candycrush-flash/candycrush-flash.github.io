@@ -218,8 +218,8 @@ function setProfile(id) {
 function addBooster() {
 	var boosters = JSON.parse(localStorage.getItem('boosters_' + getProfile()));
 	if(!boosters) boosters = [];
-	var ids = [0, 3241, 3240, 3134, 3125, 3124, 3122, 3120, 3118, 3108, 3106, 3105, 3102, 3101, 3100];
-	var types = ['CandyUfoIngame', 'CandyStripedBrush', 'CandyBubbleGum', 'CandySweetTeeth', 'CandyJoker', 'CandyStripedWrapped', 'CandyAntiPeppar', 'CandyFreeSwitch', 'CandyCoconutLiquorice', 'CandySwedishFish', 'CandyHammer', 'CandyExtraMoves', 'CandyColorBomb', 'CandyExtraTime'];
+	var ids = [0, 3241, 3240, 3134, 3125, 3124, 3122, 3120, 3118, 3108, 3106, 3105, 3102, 3101, 3100, 3202];
+	var types = ['CandyUfoIngame', 'CandyStripedBrush', 'CandyBubbleGum', 'CandySweetTeeth', 'CandyJoker', 'CandyStripedWrapped', 'CandyAntiPeppar', 'CandyFreeSwitch', 'CandyCoconutLiquorice', 'CandySwedishFish', 'CandyHammer', 'CandyExtraMoves', 'CandyColorBomb', 'CandyExtraTime', 'CandyCharmOfFrozenTime'];
 	var id = prompt(getString('BOOSTER_LIST'));
 	if(!id) return;
 	var boosterID = ids[parseInt(id)];
@@ -291,4 +291,69 @@ function resetWheel() {
 	if(!confirm(getString('RESET_WHEEL_CONFIRM'))) return;
 	localStorage.removeItem('wheelData_' + getProfile());
 	history.go(0);
+}
+
+function initDebugMode() {
+	var debug = localStorage.getItem('debug_' + getProfile()) || '1';
+	if(debug == '0')
+		document.getElementById('toggleDebug').textContent = getString('ENABLE_DEBUG');
+	else
+		document.getElementById('toggleDebug').textContent = getString('DISABLE_DEBUG');
+}
+
+function toggleDebug() {
+	var debug = localStorage.getItem('debug_' + getProfile()) || '1';
+	if(debug == '0')
+		localStorage.setItem('debug_' + getProfile(), '1');
+	else
+		localStorage.setItem('debug_' + getProfile(), '0');
+	history.go(0);
+}
+
+function initInfiniteLives() {
+	var inflife = localStorage.getItem('infiniteLives_' + getProfile()) || '0';
+	if(inflife == '0')
+		document.getElementById('toggleInfiniteLives').textContent = getString('ENABLE_INFINITE_LIVES');
+	else
+		document.getElementById('toggleInfiniteLives').textContent = getString('DISABLE_INFINITE_LIVES');
+}
+
+function toggleInfiniteLives() {
+	var inflife = localStorage.getItem('infiniteLives_' + getProfile()) || '0';
+	if(inflife == '0')
+		localStorage.setItem('infiniteLives_' + getProfile(), '1');
+	else
+		localStorage.setItem('infiniteLives_' + getProfile(), '0');
+	history.go(0);
+}
+
+function initInfiniteItems() {
+	var infitems = localStorage.getItem('infiniteItems_' + getProfile()) || '0';
+	if(infitems == '0')
+		document.getElementById('toggleInfiniteItems').textContent = getString('ENABLE_INFINITE_ITEMS');
+	else
+		document.getElementById('toggleInfiniteItems').textContent = getString('DISABLE_INFINITE_ITEMS');
+}
+
+function toggleInfiniteItems() {
+	var infitems = localStorage.getItem('infiniteItems_' + getProfile()) || '0';
+	if(infitems == '0')
+		localStorage.setItem('infiniteItems_' + getProfile(), '1');
+	else
+		localStorage.setItem('infiniteItems_' + getProfile(), '0');
+	history.go(0);
+}
+
+function initBackground() {
+	var style = document.getElementById('pageStyle');
+	var date = new Date();
+	var month = date.getMonth() + 1, day = date.getDate();
+	if(month == 10 && day == 31) {
+		if(date.getFullYear() == 2015)
+			style.innerHTML += 'body { background-image: url(\'./images/backgrounds/bg-ccs-halloween2015.jpg\') !important; }';
+		else
+			style.innerHTML += 'body { background-image: url(\'./images/backgrounds/bg-ccs-halloween.jpg\') !important; }';
+	} else if(month == 12 && day == 25) {
+		style.innerHTML += 'body { background-image: url(\'./images/backgrounds/bg-ccs-xmas.jpg\') !important; }';
+	}
 }

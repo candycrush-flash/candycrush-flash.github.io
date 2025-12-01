@@ -491,8 +491,7 @@ window.boosterIdentifiers = {
     "3008":"CandyHammerTwoPack",
     "CandyHardCurrencyX250":"3299",
     "3299":"CandyHardCurrencyX250"
-}
-
+};
 
 window.UnlockBoosters = [
     "CandyExtraTime",
@@ -509,5 +508,6 @@ window.UnlockBoosters = [
     "CandyMoonStruck",
     "CandyUfoIngame",
     "CandyStripedWrapped",
-    "CandyStripedBrush"
-]
+    "CandyStripedBrush",
+	"CandyCharmOfFrozenTime",
+];
