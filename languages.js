@@ -45,8 +45,8 @@ window.languages = {
 			RESET_WHEEL_CONFIRM: 'Are you sure you want to reset the roulette so you can spin it again now?',
 			ENABLE_DEBUG: 'Enable debug mode',
 			DISABLE_DEBUG: 'Disable debug mode',
-			ENABLE_INFINITE_LIVES: 'Prevent spending lifes',
-			DISABLE_INFINITE_LIVES: 'Enable spending lifes',
+			ENABLE_INFINITE_LIVES: 'Prevent spending lives',
+			DISABLE_INFINITE_LIVES: 'Enable spending lives',
 			ENABLE_INFINITE_ITEMS: 'Prevent spending boosters',
 			DISABLE_INFINITE_ITEMS: 'Enable spending boosters',
 		}
