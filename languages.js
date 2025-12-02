@@ -347,10 +347,10 @@ function initStrings() {
 	document.querySelectorAll('dl').forEach(el => {
 		dt = el.querySelector('dt');
 		dd = el.querySelectorAll('dd li');
-		dt.innerHTML = getString(dt.innerHTML);
+		dt.textContent = getString(dt.textContent);
 		dd.forEach(ln => {
 			a = ln.querySelector('a');
-			if(a) a.innerHTML = getString(a.innerHTML);
+			if(a) a.textContent = getString(a.textContent);
 		});
 	});
 	
@@ -367,9 +367,10 @@ function loadLanguages() {
 	var langList = document.getElementById('languageList');
 	for(var lang in window.languages) {
 		var li = document.createElement('li');
-		li.innerHTML = '<a onclick="setLanguage(\'' + lang + '\');">' + escapeHTML(window.languages[lang].display) + '</a>';
+		var dp = escapeHTML(window.languages[lang].display);
+		li.innerHTML = '<a onclick="setLanguage(\'' + lang + '\');">' + dp + '</a>';
 		if(getLanguage() == lang)
-			li.innerHTML = '<b>' + escapeHTML(window.languages[lang].display) + '</b>';
+			li.innerHTML = '<b>' + dp + '</b>';
 		langList.appendChild(li);
 	}
 }
