@@ -1,0 +1,100 @@
+body {
+	background-color: #ffffff;
+	background-image: url('/images/backgrounds/bg-ccs-gradient.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 8px;
+	height: calc(100vh - 16px);
+}
+
+body.halloween {
+	background-image: url('/images/backgrounds/bg-ccs-halloween.jpg');
+}
+
+body.halloween-2015 {
+	background-image: url('/images/backgrounds/bg-ccs-halloween2015.jpg');
+}
+
+body.xmas {
+	background-image: url('/images/backgrounds/bg-ccs-xmas.jpg');
+}
+
+div#gameContainer {
+	margin: 0 0 10px 0;
+	display: block;
+	width: 755px;
+	height: 650px;
+	border: 2px solid gray;
+	border-color: ThreeDShadow ThreeDHighlight ThreeDHighlight ThreeDShadow;
+}
+
+td {
+	vertical-align: top;
+	padding-right: 20px;
+}
+
+dl dt {
+	box-sizing: border-box;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 200px;
+	min-width: 200px;
+	max-width: 200px;
+	cursor: pointer;
+	font-weight: bold;
+	border-radius: 8px 8px 0 0;
+	padding: 4px 6px 3px 6px;
+	color: white;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, .2));
+	font-size: 11pt;
+	position: relative;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, .45);
+}
+
+dl dt:before {
+	content: '';
+	position: absolute;
+	display: block;
+	margin: 0px;
+	top: 2px;
+	left: 3px;
+	right: 3px;
+	height: 35%;
+	border-radius: 99px 99px 6px 6px;
+	background: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, .1));
+}
+
+dl dd {
+	width: 200px;
+	min-width: 200px;
+	max-width: 200px;
+	box-sizing: border-box;
+	border-radius: 0 0 5px 5px;
+	padding: 4px 8px 4px 8px;
+	background-color: rgba(255, 255, 255, .85);
+	margin: 0;
+}
+
+dl dd li {
+	margin: 2px 0 2px 12px;
+}
+
+dl dd li a {
+	color: rgb(0, 32, 64);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+dl dd li a:hover {
+	text-decoration: underline;
+}
+
+dl {
+	width: 200px;
+	min-width: 200px;
+	max-width: 200px;
+	margin-top: 0;
+	box-sizing: border-box;
+}

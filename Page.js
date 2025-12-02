@@ -345,15 +345,15 @@ function toggleInfiniteItems() {
 }
 
 function initBackground() {
-	var style = document.getElementById('pageStyle');
+	var body = document.body;
 	var date = new Date();
 	var month = date.getMonth() + 1, day = date.getDate();
 	if(month == 10 && day == 31) {
 		if(date.getFullYear() == 2015)
-			style.innerHTML += 'body { background-image: url(\'./images/backgrounds/bg-ccs-halloween2015.jpg\') !important; }';
+			body.className = 'halloween-2015';
 		else
-			style.innerHTML += 'body { background-image: url(\'./images/backgrounds/bg-ccs-halloween.jpg\') !important; }';
+			body.className = 'halloween';
 	} else if(month == 12 && day == 25) {
-		style.innerHTML += 'body { background-image: url(\'./images/backgrounds/bg-ccs-xmas.jpg\') !important; }';
+		body.className = 'xmas';
 	}
 }
