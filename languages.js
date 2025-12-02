@@ -192,8 +192,8 @@ window.languages = {
 	ru: {
 		display: 'Русский',
 		// font: 'RussianFonts',
-		pageFont: 'undefined',
-		pageFontSize: '9',
+		pageFont: 'Tahoma',
+		pageFontSize: '8',
 		language: 'ru',
 		locale: 'ru_RU',
 		title: 'Candy Crush Saga',
@@ -236,8 +236,8 @@ window.languages = {
 	es: {
 		display: 'Español',
 		// font: 'DefaultFonts',
-		pageFont: 'undefined',
-		pageFontSize: '9',
+		pageFont: 'Tahoma',
+		pageFontSize: '8',
 		language: 'es',
 		locale: 'es_ES',
 		title: 'Candy Crush Saga',
@@ -280,8 +280,8 @@ window.languages = {
 	it: {
 		display: 'Italiano',
 		// font: 'DefaultFonts',
-		pageFont: 'undefined',
-		pageFontSize: '9',
+		pageFont: 'Tahoma',
+		pageFontSize: '8',
 		language: 'it',
 		locale: 'it_IT',
 		title: 'Candy Crush Saga',
