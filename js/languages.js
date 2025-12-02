@@ -11,8 +11,8 @@ window.languages = {
 		title: 'Candy Crush Saga',
 		ui: {
 			UNLOCK_LEVEL_PROMPT: 'Unlock levels until what level? (1 to 2825) This action is irreversible.',
-			CHARGE_LIVES_PROMPT: 'Charge all the hearts?',
-			EXTEND_LIVES_PROMPT: 'Enter the maximum number of hearts.',
+			CHARGE_LIVES_PROMPT: 'Charge all the lives?',
+			EXTEND_LIVES_PROMPT: 'Enter the maximum number of lives.',
 			ENTER_PROFILE_NAME: 'Enter the name of the profile',
 			NAME_ALREADY_EXISTS: 'That name already exists.',
 			NEW_NAME_PROMPT: 'Enter the new name',
@@ -49,6 +49,8 @@ window.languages = {
 			DISABLE_INFINITE_LIVES: 'Enable spending lives',
 			ENABLE_INFINITE_ITEMS: 'Prevent spending boosters',
 			DISABLE_INFINITE_ITEMS: 'Enable spending boosters',
+			CREDITS: 'Credits',
+			OPERATION_CANCELLED: 'Operation cancelled',
 		}
 	},
 	ko: {
@@ -99,6 +101,8 @@ window.languages = {
 			DISABLE_INFINITE_LIVES: '하트 소모 허용',
 			ENABLE_INFINITE_ITEMS: '부스터 소모하지 않기',
 			DISABLE_INFINITE_ITEMS: '부스터 소모 허용',
+			CREDITS: '만든이들',
+			OPERATION_CANCELLED: '취소되었습니다',
 		}
 	},
 	zh: {
@@ -143,6 +147,14 @@ window.languages = {
 			DELETE_PROFILE_CONFIRM: '删除当前个人资料？您将丢失所有进度。',
 			RESET_WHEEL: '重置轮盘时间',
 			RESET_WHEEL_CONFIRM: '您确定要重置轮盘以便现在再次旋转吗？',
+			ENABLE_DEBUG: '启用调试模式',
+			DISABLE_DEBUG: '禁用调试模式',
+			ENABLE_INFINITE_LIVES: '防止消耗生命',
+			DISABLE_INFINITE_LIVES: '允许消耗生命',
+			ENABLE_INFINITE_ITEMS: '防止消耗道具',
+			DISABLE_INFINITE_ITEMS: '允许消耗道具',
+			CREDITS: '制作人员',
+			OPERATION_CANCELLED: '操作已取消',
 		}
 	},
 	ja: {
@@ -187,6 +199,14 @@ window.languages = {
 			DELETE_PROFILE_CONFIRM: '現在のプロフィールを削除しますか？これまでの進行状況はすべて失われます。',
 			RESET_WHEEL: 'ルーレットの時間をリセット',
 			RESET_WHEEL_CONFIRM: 'ルーレットをリセットして、もう一度回してもよろしいですか？',
+			ENABLE_DEBUG: 'デバッグモードを有効にする',
+			DISABLE_DEBUG: 'デバッグモードを無効にする',
+			ENABLE_INFINITE_LIVES: 'ライフ消費を無効化',
+			DISABLE_INFINITE_LIVES: 'ライフ消費を有効化',
+			ENABLE_INFINITE_ITEMS: 'ブースター消費を無効化',
+			DISABLE_INFINITE_ITEMS: 'ブースター消費を有効化',
+			CREDITS: 'クレジット',
+			OPERATION_CANCELLED: '操作がキャンセルされました',
 		}
 	},
 	ru: {
@@ -231,6 +251,14 @@ window.languages = {
 			DELETE_PROFILE_CONFIRM: 'Удалить текущий профиль? Вы потеряете весь прогресс',
 			RESET_WHEEL: 'Сбросить время рулетки',
 			RESET_WHEEL_CONFIRM: 'Вы уверены, что хотите сбросить время рулетки, чтобы снова запустить её?',
+			ENABLE_DEBUG: 'Включить режим отладки',
+			DISABLE_DEBUG: 'Выключить режим отладки',
+			ENABLE_INFINITE_LIVES: 'Отключить расход жизней',
+			DISABLE_INFINITE_LIVES: 'Включить расход жизней',
+			ENABLE_INFINITE_ITEMS: 'Отключить расход бустеров',
+			DISABLE_INFINITE_ITEMS: 'Включить расход бустеров',
+			CREDITS: 'Авторы',
+			OPERATION_CANCELLED: 'Операция отменена.',
 		}
 	},
 	es: {
@@ -275,6 +303,14 @@ window.languages = {
 			DELETE_PROFILE_CONFIRM: '¿Eliminar el perfil actual? Perderás todo tu progreso',
 			RESET_WHEEL: 'Reiniciar el tiempo de la ruleta',
 			RESET_WHEEL_CONFIRM: '¿Estás seguro de que deseas reiniciar la ruleta para poder girarla de nuevo?',
+			ENABLE_DEBUG: 'Activar modo debug',
+			DISABLE_DEBUG: 'Desactivar modo debug',
+			ENABLE_INFINITE_LIVES: 'Desactivar consumo de vidas',
+			DISABLE_INFINITE_LIVES: 'Activar consumo de vidas',
+			ENABLE_INFINITE_ITEMS: 'Desactivar consumo de potenciadores',
+			DISABLE_INFINITE_ITEMS: 'Activar consumo de potenciadores',
+			CREDITS: 'Créditos',
+			OPERATION_CANCELLED: 'Operación cancelada',
 		}
 	},
 	it: {
@@ -325,6 +361,14 @@ window.languages = {
 			DISABLE_INFINITE_LIVES: 'Abilita consumo vite',
 			ENABLE_INFINITE_ITEMS: 'Disabilita consumo booster',
 			DISABLE_INFINITE_ITEMS: 'Abilita consumo booster',
+			ENABLE_DEBUG: 'Attiva modalità debug',
+			DISABLE_DEBUG: 'Disattiva modalità debug',
+			ENABLE_INFINITE_LIVES: 'Disabilita consumo vite',
+			DISABLE_INFINITE_LIVES: 'Abilita consumo vite',
+			ENABLE_INFINITE_ITEMS: 'Disabilita consumo booster',
+			DISABLE_INFINITE_ITEMS: 'Abilita consumo booster',
+			CREDITS: 'Crediti',
+			OPERATION_CANCELLED: 'Operazione annullata',
 		}
 	},
 };

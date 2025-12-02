@@ -186,21 +186,31 @@ function getWheelPrize() {
 
 var initialEpisodes = [
 	{
-		"id": 1,
-		"levels": [{"id":1,"episodeId":1,"score":0,"stars":0,"unlocked":true,"completedAt":-1,"unlockConditionDataList":[]}]
-	}, {
-		"id": 1201,
-		"levels": [
+		id: 1,
+		levels: [
 			{
-				"id": 1,
-				"episodeId": 1201,
-				"score": 0,
-				"stars": 0,
-				"unlocked": true,
-				"completedAt": -1,
-				"unlockConditionDataList": [],
-			}
-		]
+				id: 1,
+				episodeId: 1,
+				score: 0,
+				stars: 0,
+				unlocked: true,
+				completedAt: -1,
+				unlockConditionDataList: [],
+			},
+		],
+	}, {
+		id: 1201,
+		levels: [
+			{
+				id: 1,
+				episodeId: 1201,
+				score: 0,
+				stars: 0,
+				unlocked: true,
+				completedAt: -1,
+				unlockConditionDataList: [],
+			},
+		],
 	}
 ];
 
@@ -211,8 +221,8 @@ function getUserUniverse() {
 	let data = get('userUniverse_' + currentProfile);
 	if(!data) {
 		data = {
-			"episodes": initialEpisodes,
-			"unlockedItems": [],
+			episodes: initialEpisodes,
+			unlockedItems: [],
 		};
 		set('userUniverse_' + currentProfile, data);
 	}
@@ -351,19 +361,19 @@ function gameEnd(endData) {
 				// if level 15 is cleared
 				if(DWUniverseEpisode && DWUniverseLevel?.stars > 0) {
 					//console.log('unlocking dreamworld episode after clearing reality episode')
-					if(!userUniverse.episodes.find((universeepisode)=>universeepisode.id == res.episodeId+1200)) {
+					if(!userUniverse.episodes.find(universeepisode => universeepisode.id == res.episodeId + 1200)) {
 						// we add the level to the array as well, as this is a different episode being unlocked lol
 						userUniverse.episodes.push({
-							id: res.episodeId+1200,
-							levels:[{
-								"id": 1,
-								"episodeId": res.episodeId+1200,
-								"score": 0,
-								"stars": 0,
-								"unlocked": true,
-								"completedAt": -1,
-								"unlockConditionDataList": []
-							  }]
+							id: res.episodeId + 1200,
+							levels: [{
+								id: 1,
+								episodeId: res.episodeId + 1200,
+								score: 0,
+								stars: 0,
+								unlocked: true,
+								completedAt: -1,
+								unlockConditionDataList: [],
+							}],
 						});
 						res.events.push({ type:"EPISODE_UNLOCKED", data: JSON.stringify({ episodeId: res.episodeId + 1200 }) });
 						res.events.push({ type:"LEVEL_UNLOCKED", data: JSON.stringify({ episodeId: res.episodeId + 1200, levelId: 1 }) });
@@ -414,7 +424,7 @@ function gameEnd(endData) {
 		// maybe enable it in the swf so the game realizes sooner
 		if(res.episodeId == 2 && res.levelId == 9)
 			if(!getBoosters(true).find(booster => booster.type=="CandyCharmOfFrozenTime"))
-				addBoosters([{type:"CandyCharmOfFrozenTime", amount:1}], true);
+				addBoosters([{ type: "CandyCharmOfFrozenTime", amount: 1 }], true);
 
 		// give life back
 		if((localStorage.getItem('infiniteLives_' + currentProfile) || '0') == '0') {

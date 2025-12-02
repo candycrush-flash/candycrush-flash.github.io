@@ -16,13 +16,13 @@ function unlockLevels() {
 			lvl = ep.levels.find(item => item.id == levelInfo[i][1]);
 			if(!lvl) {
 				ep.levels.push({
-					"id": levelInfo[i][1],
-					"episodeId": levelInfo[i][0],
-					"score": 0,
-					"stars": 0,
-					"unlocked": true,
-					"completedAt": -1,
-					"unlockConditionDataList": []
+					id: levelInfo[i][1],
+					episodeId: levelInfo[i][0],
+					score: 0,
+					stars: 0,
+					unlocked: true,
+					completedAt: -1,
+					unlockConditionDataList: [],
 				});
 			} else if(!lvl.unlocked) {
 				lvl.unlocked = true;
@@ -99,14 +99,14 @@ function loadProfiles() {
 
 function newProfile() {
 	var name = prompt(getString('ENTER_PROFILE_NAME'));
-	if(!name) return;
+	if(name == '') return alert(getString('OPERATION_CANCELLED'));
+	else if(!name) return;
 	var profiles = JSON.parse(localStorage.getItem('profiles'));
-	for(var item of profiles.profiles) {
+	for(var item of profiles.profiles)
 		if(item.name == name) {
 			alert(getString('NAME_ALREADY_EXISTS'));
 			return;
 		}
-	}
 	var id = profiles.increment + 1;
 	var li = document.createElement('li');
 	profiles.profiles.push({ name, id });
@@ -121,7 +121,7 @@ function deleteProfile() {
 	if(!confirm(getString('DELETE_PROFILE_CONFIRM'))) return;
 	var profiles = JSON.parse(localStorage.getItem('profiles'));
 	var pfidx = profiles.profiles.findIndex(item => item.id == getProfile());
-	if(pfidx < 0) return;
+	if(pfidx < 0) return alert(getString('PROFILE_NOT_FOUND'));
 	var id = profiles.profiles[pfidx].id;
 	profiles.profiles.splice(pfidx, 1);
 	document.querySelector('li[data-id="' + id + '"]').remove();
@@ -137,10 +137,11 @@ function deleteProfile() {
 
 function renameProfile() {
 	var name = prompt(getString('NEW_NAME_PROMPT'));
-	if(!name) return;
+	if(name == '') return alert(getString('OPERATION_CANCELLED'));
+	else if(!name) return;
 	var profiles = JSON.parse(localStorage.getItem('profiles'));
 	var pf = profiles.profiles.find(item => item.id == getProfile());
-	if(!pf) return;
+	if(!pf) return alert(getString('PROFILE_NOT_FOUND'));
 	for(var item of profiles.profiles) {
 		if(item.name == name && item.id != pf.id) {
 			alert(getString('NAME_ALREADY_EXISTS'));
@@ -155,6 +156,7 @@ function renameProfile() {
 function importProfile() {
 	var profiles = JSON.parse(localStorage.getItem('profiles'));
 	var data = prompt(getString('PROFILE_DATA_PROMPT'));
+	if(data == null) return;
 	try {
 		data = JSON.parse(data);
 	} catch(e) {
@@ -221,12 +223,14 @@ function addBooster() {
 	var ids = [0, 3241, 3240, 3134, 3125, 3124, 3122, 3120, 3118, 3108, 3106, 3105, 3102, 3101, 3100, 3202];
 	var types = ['CandyUfoIngame', 'CandyStripedBrush', 'CandyBubbleGum', 'CandySweetTeeth', 'CandyJoker', 'CandyStripedWrapped', 'CandyAntiPeppar', 'CandyFreeSwitch', 'CandyCoconutLiquorice', 'CandySwedishFish', 'CandyHammer', 'CandyExtraMoves', 'CandyColorBomb', 'CandyExtraTime', 'CandyCharmOfFrozenTime'];
 	var id = prompt(getString('BOOSTER_LIST'));
-	if(!id) return;
-	var boosterID = ids[parseInt(id)];
-	if(!boosterID) return;
+	if(id == '') return alert(getString('OPERATION_CANCELLED'));
+	else if(!id) return;
+	id = parseInt(id);
+	var boosterID = ids[id];
+	if(!boosterID) return alert(getString('OPERATION_CANCELLED'));
 	var booster = boosters.find(item => item.typeId == boosterID);
 	if(!booster) booster = boosters[boosters.push({
-		type: types[parseInt(id)],
+		type: types[id],
 		category: "candyBooster",
 		typeId: boosterID,
 		amount: 0,
@@ -240,6 +244,8 @@ function addBooster() {
 		if(booster.amount < 0) booster.amount = 0;
 		localStorage.setItem('boosters_' + getProfile(), JSON.stringify(boosters));
 		history.go(0);
+	} else if(amount == '') {
+		alert(getString('OPERATION_CANCELLED'));
 	}
 }
 
@@ -256,7 +262,7 @@ function addGold() {
 			amount: 0,
 			availability: 2,
 			leaseStatus: 0,
-			unlocked: true
+			unlocked: true,
 		}) - 1];
 		if(!golds.amount) golds.amount = 0;
 		golds.amount += gold;
@@ -270,7 +276,8 @@ function addGold() {
 	}
 }
 
-function toggleCard(el) {
+function toggleCard(event) {
+	var el = event.currentTarget;
 	if(el.nextElementSibling.style.display == 'none') {
 		el.nextElementSibling.style.display = 'block';
 		localStorage.setItem('card_' + el.getAttribute('id'), '1');
@@ -284,6 +291,7 @@ function initCards() {
 	document.querySelectorAll('dt[id]').forEach(el => {
 		if(localStorage.getItem('card_' + el.getAttribute('id')) == '0')
 			el.nextElementSibling.style.display = 'none';
+		el.addEventListener('click', toggleCard, false);
 	});
 }
 
@@ -356,4 +364,8 @@ function initBackground() {
 	} else if(month == 12 && day == 25) {
 		body.className = 'xmas';
 	}
+}
+
+function showCredits() {
+	alert('Original game: King\nFlash version archive & offline patch: Enter Pearl (eientei)');
 }
