@@ -1,11 +1,14 @@
 body {
 	background-color: #ffffff;
 	background-image: url('/images/backgrounds/bg-ccs-gradient.jpg');
-	background-position: center;
+	background-position-x: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	margin: 8px;
-	height: calc(100vh - 16px);
+	background-attachment: fixed;
+}
+
+body.classic {
+	background-image: url('/images/backgrounds/bg-ccs-gradientOld.jpg');
 }
 
 body.halloween {

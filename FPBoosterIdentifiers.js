@@ -510,4 +510,5 @@ window.UnlockBoosters = [
     "CandyStripedWrapped",
     "CandyStripedBrush",
 	"CandyCharmOfFrozenTime",
+	"CandyCharmOfStripedCandy",
 ];

@@ -220,25 +220,26 @@ function setProfile(id) {
 function addBooster() {
 	var boosters = JSON.parse(localStorage.getItem('boosters_' + getProfile()));
 	if(!boosters) boosters = [];
-	var ids = [0, 3241, 3240, 3134, 3125, 3124, 3122, 3120, 3118, 3108, 3106, 3105, 3102, 3101, 3100, 3202];
-	var types = ['CandyUfoIngame', 'CandyStripedBrush', 'CandyBubbleGum', 'CandySweetTeeth', 'CandyJoker', 'CandyStripedWrapped', 'CandyAntiPeppar', 'CandyFreeSwitch', 'CandyCoconutLiquorice', 'CandySwedishFish', 'CandyHammer', 'CandyExtraMoves', 'CandyColorBomb', 'CandyExtraTime', 'CandyCharmOfFrozenTime'];
+	var ids = [0, 3241, 3240, 3134, 3125, 3124, 3122, 3120, 3118, 3108, 3106, 3105, 3102, 3101, 3100, 3202, 3201];
+	var types = ['', 'CandyUfoIngame', 'CandyStripedBrush', 'CandyBubbleGum', 'CandySweetTeeth', 'CandyJoker', 'CandyStripedWrapped', 'CandyAntiPeppar', 'CandyFreeSwitch', 'CandyCoconutLiquorice', 'CandySwedishFish', 'CandyHammer', 'CandyExtraMoves', 'CandyColorBomb', 'CandyExtraTime', 'CandyCharmOfFrozenTime', 'CandyCharmOfStripedCandy'];
 	var id = prompt(getString('BOOSTER_LIST'));
 	if(id == '') return alert(getString('OPERATION_CANCELLED'));
 	else if(!id) return;
 	id = parseInt(id);
 	var boosterID = ids[id];
 	if(!boosterID) return alert(getString('OPERATION_CANCELLED'));
+	var isCharm = types[id].startsWith('CandyCharm');
 	var booster = boosters.find(item => item.typeId == boosterID);
 	if(!booster) booster = boosters[boosters.push({
 		type: types[id],
-		category: "candyBooster",
+		category: (isCharm ? 'candyCharm' : 'candyBooster'),
 		typeId: boosterID,
 		amount: 0,
 		availability: 2,
 		leaseStatus: 0,
 		unlocked: true,
 	}) - 1];
-	var amount = prompt(getString('BOOSTER_AMOUNT_PROMPT'));
+	var amount = (isCharm ? (1) : prompt(getString('BOOSTER_AMOUNT_PROMPT')));
 	if(amount) {
 		booster.amount += (parseInt(amount) || 0);
 		if(booster.amount < 0) booster.amount = 0;
@@ -354,18 +355,33 @@ function toggleInfiniteItems() {
 
 function initBackground() {
 	var body = document.body;
-	var date = new Date();
-	var month = date.getMonth() + 1, day = date.getDate();
-	if(month == 10 && day == 31) {
-		if(date.getFullYear() == 2015)
-			body.className = 'halloween-2015';
-		else
-			body.className = 'halloween';
-	} else if(month == 12 && day == 25) {
-		body.className = 'xmas';
+	var theme = localStorage.getItem('theme');
+	var isAuto = false;
+	if(!theme || theme == 'auto') {
+		isAuto = true;
+		var date = new Date();
+		var month = date.getMonth() + 1, day = date.getDate();
+		if(month == 10 && day == 31) {
+			if(date.getFullYear() == 2015)
+				theme = 'halloween-2015';
+			else
+				theme = 'halloween';
+		} else if(month == 12 && day == 25) {
+			theme = 'xmas';
+		} else {
+			theme = 'default';
+		}
 	}
+	if(theme != 'default') body.className = theme;
+	var item = document.querySelector('dd#themeList a.theme-select[data-theme="' + (isAuto ? 'auto' : theme) + '"]');
+	item.parentElement.innerHTML = '<b>' + item.textContent + '</b>';
 }
 
 function showCredits() {
 	alert('Original game: King\nFlash version archive & offline patch: Enter Pearl (eientei)');
+}
+
+function setTheme(theme) {
+	localStorage.setItem('theme', theme);
+	history.go(0);
 }
