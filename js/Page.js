@@ -230,7 +230,7 @@ function addBooster() {
 	if(!boosterID) return alert(getString('OPERATION_CANCELLED'));
 	var typename = types[id];
 	var isCharm = typename.startsWith('CandyCharm');
-	var booster = boosters.find(item => item.type == typename);
+	var booster = boosters.find(item => item.type == typename && item.typeId == boosterID);
 	if(!booster) booster = boosters[boosters.push({
 		type: typename,
 		category: (isCharm ? 'candyCharm' : 'candyBooster'),
