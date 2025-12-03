@@ -380,7 +380,7 @@ function initBackground() {
 	}
 	if(theme != 'default') body.className = theme;
 	var item = document.querySelector('dd#themeList a.theme-select[data-theme="' + (isAuto ? 'auto' : theme) + '"]');
-	item.parentElement.scrollIntoView();
+	item.parentElement.scrollIntoView(false);
 	item.parentElement.innerHTML = '<b>' + item.textContent + '</b>';
 }
 

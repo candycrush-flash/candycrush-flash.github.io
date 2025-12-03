@@ -453,8 +453,8 @@ function loadLanguages() {
 		var dp = escapeHTML(window.languages[lang].display);
 		li.innerHTML = '<a onclick="setLanguage(\'' + lang + '\');">' + dp + '</a>';
 		if(getLanguage() == lang) {
+			li.scrollIntoView(false);
 			li.innerHTML = '<b>' + dp + '</b>';
-			li.scrollIntoView();
 		}
 		langList.appendChild(li);
 	}
