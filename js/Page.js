@@ -228,10 +228,11 @@ function addBooster() {
 	id = parseInt(id);
 	var boosterID = ids[id];
 	if(!boosterID) return alert(getString('OPERATION_CANCELLED'));
-	var isCharm = types[id].startsWith('CandyCharm');
-	var booster = boosters.find(item => item.typeId == boosterID);
+	var typename = types[id];
+	var isCharm = typename.startsWith('CandyCharm');
+	var booster = boosters.find(item => item.type == typename);
 	if(!booster) booster = boosters[boosters.push({
-		type: types[id],
+		type: typename,
 		category: (isCharm ? 'candyCharm' : 'candyBooster'),
 		typeId: boosterID,
 		amount: 0,
