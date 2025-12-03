@@ -380,8 +380,8 @@ function initBackground() {
 	}
 	if(theme != 'default') body.className = theme;
 	var item = document.querySelector('dd#themeList a.theme-select[data-theme="' + (isAuto ? 'auto' : theme) + '"]');
-	item.parentElement.innerHTML = '<b>' + item.textContent + '</b>';
 	item.parentElement.scrollIntoView();
+	item.parentElement.innerHTML = '<b>' + item.textContent + '</b>';
 }
 
 function showCredits() {
