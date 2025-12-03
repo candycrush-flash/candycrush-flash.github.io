@@ -48,12 +48,16 @@ dl dt {
 	cursor: pointer;
 	font-weight: bold;
 	border-radius: 8px 8px 0 0;
-	padding: 4px 6px 3px 6px;
+	padding: 6px 10px 3px 10px;
 	color: white;
-	background: linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, .2));
-	font-size: 11pt;
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, .2));
+	font-size: 10.5pt;
 	position: relative;
-	text-shadow: 1px 1px 0px rgba(0, 0, 0, .45);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, .45);
+}
+
+body.halloween dl dt, body.halloween-2015 dl dt {
+	background-image: linear-gradient(to bottom, rgba(128, 128, 128, .5), rgba(255, 255, 255, .65));
 }
 
 dl dt:before {
@@ -66,7 +70,7 @@ dl dt:before {
 	right: 3px;
 	height: 35%;
 	border-radius: 99px 99px 6px 6px;
-	background: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, .1));
+	background-image: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, .1));
 }
 
 dl dd {
@@ -78,6 +82,11 @@ dl dd {
 	padding: 4px 8px 4px 8px;
 	background-color: rgba(255, 255, 255, .85);
 	margin: 0;
+}
+
+dl dd#languageList, body[data-version="2017"] dl dd#themeList {
+	max-height: 71px;
+	overflow-y: auto;
 }
 
 dl dd li {
@@ -100,4 +109,23 @@ dl {
 	max-width: 200px;
 	margin-top: 0;
 	box-sizing: border-box;
+}
+
+a.link {
+	background-color: rgba(255, 255, 255, .85);
+	padding: 4px;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+a.link:before {
+	content: '[';
+}
+
+a.link:after {
+	content: ']';
+}
+
+a.link + a.link {
+	margin-left: 8px;
 }

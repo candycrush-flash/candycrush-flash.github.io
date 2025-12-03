@@ -5,7 +5,7 @@ window.languages = {
 		display: 'English',
 		// font: 'DefaultFonts',
 		pageFont: 'Tahoma',
-		pageFontSize: '8',
+		pageFontSize: 8,
 		language: 'en',
 		locale: 'en_US',
 		title: 'Candy Crush Saga',
@@ -23,6 +23,7 @@ window.languages = {
 			COPY_PROFILE_DATA: 'Copy the exported data',
 			BOOSTER_LIST: 'Enter the booster you want in number: \n1. UFO\n2. Stripe brush\n3. Bubblegum troll\n4. Sweet teeth\n5. Joker\n6. Striped and wrapped candies\n7. Bomb cooler\n8. Free switch\n9. Coconut wheel\n10. Jelly fish\n11. Lollipop hammer\n12. Extra moves\n13. Color bomb\n14. Extra time\n15. Charm of Frozen Time\n16. Charm of Stripes',
 			BOOSTER_AMOUNT_PROMPT: 'How many do you want? (Enter negative to remove)',
+			CHARM_NOTIFY: 'For charm boosters, if already enabled then it will be disabled and vice versa.',
 			GOLDBAR_AMOUNT_PROMPT: 'Enter the number of gold bars to add to your bank (Enter negative to decrease them)',
 			SWITCH_PROFILES: 'Switch Profiles',
 			MANAGE_PROFILES: 'Manage Profiles',
@@ -64,7 +65,7 @@ window.languages = {
 		display: '한국어',
 		// font: 'KoreanFonts',
 		pageFont: '\'굴림\', Gulim',
-		pageFontSize: '9',
+		pageFontSize: 9,
 		language: 'ko',
 		locale: 'ko_KR',
 		title: '캔디 크러쉬 사가',
@@ -72,24 +73,25 @@ window.languages = {
 			UNLOCK_LEVEL_PROMPT: '몇 레벨까지 잠금 해제하시겠습니까? (최대 2825) 이 작업은 취소할 수 없습니다',
 			CHARGE_LIVES_PROMPT: '하트를 모두 충전하시겠습니까?',
 			EXTEND_LIVES_PROMPT: '최대 하트의 개수를 입력하십시오',
-			ENTER_PROFILE_NAME: '사용자의 이름을 입력하십시오',
+			ENTER_PROFILE_NAME: '프로필의 이름을 입력하십시오',
 			NAME_ALREADY_EXISTS: '이미 존재하는 이름입니다',
-			NEW_NAME_PROMPT: '새 이름을 입력하십시오',
-			PROFILE_DATA_PROMPT: '사용자 데이타를 입력하십시오',
+			NEW_NAME_PROMPT: '새 프로필 이름을 입력하십시오',
+			PROFILE_DATA_PROMPT: '프로필 데이타를 입력하십시오',
 			INVALID_DATA: '데이타가 잘못되었습니다',
 			IMPORT_ALREADY_EXISTS: '이미 존재하는 이름입니다. 새 이름을 입력하거나 덮어쓰려면 비워두십시오',
 			PROFILE_NOT_FOUND: '프로필이 존재하지 않습니다',
 			COPY_PROFILE_DATA: '내보낸 프로필 데이타를 복사하십시오',
 			BOOSTER_LIST: '부스터의 번호를 입력하십시오. \n1. UFO\n2. 줄무늬 브러쉬\n3. 버블껌 트롤\n4. 달콤한 이빨\n5. 조커\n6. 줄무늬 캔디와 포장 캔디\n7. 폭탄 쿨러\n8. 맘대로 바꾸기\n9. 코코넛 휠\n10. 젤리 물고기\n11. 롤리팝 해머\n12. 추가 이동 횟수\n13. 컬러 폭탄\n14. 추가 시간\n15. 시간 정지 마법\n16. 페인트 마법',
 			BOOSTER_AMOUNT_PROMPT: '추가할 부스터의 개수를 입력하십시오 (음수로 제거)',
+			CHARM_NOTIFY: '마법 부스터를 선택하는 경우에는 선택할 때마다 활성화·비활성화 여부가 바뀝니다.',
 			GOLDBAR_AMOUNT_PROMPT: '추가할 골드 바의 수를 입력하십시오 (음수로 제거)',
-			SWITCH_PROFILES: '사용자 전환',
-			MANAGE_PROFILES: '사용자 관리',
-			NEW_PROFILE: '새 사용자 추가',
-			DELETE_PROFILE: '현재 사용자 삭제',
-			RENAME_PROFILE: '현재 사용자 이름 바꾸기',
-			IMPORT_PROFILE: '기존 사용자 추가',
-			EXPORT_PROFILE: '현재 사용자 데이타 내보내기',
+			SWITCH_PROFILES: '프로필 전환',
+			MANAGE_PROFILES: '프로필 관리',
+			NEW_PROFILE: '새 프로필 추가',
+			DELETE_PROFILE: '현재 프로필 삭제',
+			RENAME_PROFILE: '현재 프로필 이름 바꾸기',
+			IMPORT_PROFILE: '프로필 가져오기',
+			EXPORT_PROFILE: '현재 프로필 내보내기',
 			GAME_TOOLS: '게임 도구',
 			UNLOCK_LEVELS: '레벨 잠금 해제',
 			CHARGE_LIVES: '하트 충전',
@@ -123,7 +125,7 @@ window.languages = {
 		display: '中文',
 		font: 'JapaneseFonts',
 		pageFont: 'undefined',
-		pageFontSize: '9',
+		pageFontSize: 9,
 		language: 'zh',
 		locale: 'zh_CN',
 		title: '糖果传奇',
@@ -151,7 +153,7 @@ window.languages = {
 			EXPORT_PROFILE: '导出当前个人资料',
 			GAME_TOOLS: '游戏工具',
 			UNLOCK_LEVELS: '解锁关卡',
-			CHARGE_LIVES: '充能生命',
+			CHARGE_LIVES: '补充生命',
 			EXTEND_LIVES: '延长生命',
 			ADD_BOOSTERS: '添加助推器',
 			ADD_GOLDBARS: '添加金条',
@@ -182,7 +184,7 @@ window.languages = {
 		display: '日本語',
 		// font: 'JapaneseFonts',
 		pageFont: 'undefined',
-		pageFontSize: '9',
+		pageFontSize: 9,
 		language: 'ja',
 		locale: 'ja_JP',
 		title: 'キャンディークラッシュ',
@@ -241,7 +243,7 @@ window.languages = {
 		display: 'Русский',
 		// font: 'RussianFonts',
 		pageFont: 'Tahoma',
-		pageFontSize: '8',
+		pageFontSize: 8,
 		language: 'ru',
 		locale: 'ru_RU',
 		title: 'Candy Crush Saga',
@@ -300,7 +302,7 @@ window.languages = {
 		display: 'Español',
 		// font: 'DefaultFonts',
 		pageFont: 'Tahoma',
-		pageFontSize: '8',
+		pageFontSize: 8,
 		language: 'es',
 		locale: 'es_ES',
 		title: 'Candy Crush Saga',
@@ -359,7 +361,7 @@ window.languages = {
 		display: 'Italiano',
 		// font: 'DefaultFonts',
 		pageFont: 'Tahoma',
-		pageFontSize: '8',
+		pageFontSize: 8,
 		language: 'it',
 		locale: 'it_IT',
 		title: 'Candy Crush Saga',
@@ -431,18 +433,12 @@ function getString(key) {
 function initStrings() {
 	var dt, dd, a;
 	var lang = window.languages[getLanguage()] || window.languages.en;
-	document.querySelectorAll('dl').forEach(el => {
-		dt = el.querySelector('dt');
-		dd = el.querySelectorAll('dd li');
-		dt.textContent = getString(dt.textContent);
-		dd.forEach(ln => {
-			a = ln.querySelector('a');
-			if(a) a.textContent = getString(a.textContent);
-		});
+	document.querySelectorAll('dl dt, dl dd li a, a.link').forEach(el => {
+		el.textContent = getString(el.textContent);
 	});
 	
 	var style = document.getElementById('pageStyle');
-	style.textContent += 'body { font-family: ' + lang.pageFont + '; } dl dd li { font-size: ' + lang.pageFontSize + 'pt; }';
+	style.textContent += 'body { font-family: ' + lang.pageFont + '; font-size: ' + lang.pageFontSize + 'pt; } dl dt { font-size: ' + (lang.pageFontSize + 1.5) + 'pt;  }';
 }
 
 function setLanguage(lang) {

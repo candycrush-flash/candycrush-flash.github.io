@@ -19,13 +19,14 @@
 		<meta property=og:description content="Play Candy Crush Saga Flash version online!" />
 	</head>
 
-	<body bgcolor=white background="/images/backgrounds/bg-ccs-gradient.jpg">
+	<body data-version=2017 bgcolor=white background="/images/backgrounds/bg-ccs-gradient.jpg">
 		<table>
 			<tr>
 				<td>
 					<div id=gameContainer>
 						<div id=game>Flash Player is unavailable or JavaScript is disabled</div>
 					</div>
+					<a class=link onclick="showCredits();">CREDITS</a>
 				</td>
 				
 				<td>
@@ -49,16 +50,13 @@
 						<dt id=tasksCard>GAME_TOOLS</dt>
 						<dd>
 							<li><a onclick="unlockLevels();">UNLOCK_LEVELS</a></li>
-							<li><a onclick="chargeHearts();">CHARGE_LIVES</a></li>
-							<li><a onclick="extendHearts();">EXTEND_LIVES</a></li>
-							<li><a onclick="addBooster();">ADD_BOOSTERS</a></li>
-							<li><a onclick="addGold();">ADD_GOLDBARS</a></li>
+							<li><a onclick="chargeHearts();">CHARGE_LIVES</a> / <a onclick="extendHearts();">EXTEND_LIVES</a></li>
+							<li><a onclick="addBooster();">ADD_BOOSTERS</a> / <a onclick="addGold();">ADD_GOLDBARS</a></li>
 							<li><a onclick="resetWheel();">RESET_WHEEL</a></li>
 							<li><a id=toggleDebug onclick="toggleDebug();"></a></li>
 							<li><a id=toggleInfiniteLives onclick="toggleInfiniteLives();"></a></li>
 							<li><a id=toggleInfiniteItems onclick="toggleInfiniteItems();"></a></li>
 							<li><a target=_blank href="swf/CCEditor.html">LEVEL_EDITOR</a></li>
-							<li><a onclick="showCredits();">CREDITS</a></li>
 						</dd>
 					</dl>
 					

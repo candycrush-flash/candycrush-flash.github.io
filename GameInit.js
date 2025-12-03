@@ -83,7 +83,7 @@ function showGame() {
 		swLiveConnect: "true",
 		allowFullScreen: "true",
 		allowScriptAccess: "always",
-		wmode: "window"
+		wmode: "window",
 	};
 
 	var attributes = {};

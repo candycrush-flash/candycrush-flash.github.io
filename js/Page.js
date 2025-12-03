@@ -218,11 +218,11 @@ function setProfile(id) {
 }
 
 function addBooster() {
-	var boosters = JSON.parse(localStorage.getItem('boosters_' + getProfile()));
+	var boosters = JSON.parse(localStorage.getItem('boosters_' + getProfile()) || '[]');
 	if(!boosters) boosters = [];
 	var ids = [0, 3241, 3240, 3134, 3125, 3124, 3122, 3120, 3118, 3108, 3106, 3105, 3102, 3101, 3100, 3202, 3201];
 	var types = ['', 'CandyUfoIngame', 'CandyStripedBrush', 'CandyBubbleGum', 'CandySweetTeeth', 'CandyJoker', 'CandyStripedWrapped', 'CandyAntiPeppar', 'CandyFreeSwitch', 'CandyCoconutLiquorice', 'CandySwedishFish', 'CandyHammer', 'CandyExtraMoves', 'CandyColorBomb', 'CandyExtraTime', 'CandyCharmOfFrozenTime', 'CandyCharmOfStripedCandy'];
-	var id = prompt(getString('BOOSTER_LIST'));
+	var id = prompt(getString('BOOSTER_LIST') + '\n\n' + getString('CHARM_NOTIFY'));
 	if(id == '') return alert(getString('OPERATION_CANCELLED'));
 	else if(!id) return;
 	id = parseInt(id);
@@ -238,10 +238,14 @@ function addBooster() {
 		amount: 0,
 		availability: 2,
 		leaseStatus: 0,
-		unlocked: true,
+		unlocked: false,
 	}) - 1];
 	var amount = (isCharm ? (1) : prompt(getString('BOOSTER_AMOUNT_PROMPT')));
 	if(amount) {
+		if(isCharm)
+			booster.unlocked = !booster.unlocked;
+		else
+			booster.unlocked = true;
 		booster.amount += (parseInt(amount) || 0);
 		if(booster.amount < 0) booster.amount = 0;
 		localStorage.setItem('boosters_' + getProfile(), JSON.stringify(boosters));
@@ -258,8 +262,8 @@ function addGold() {
 		if(!boosters) boosters = [];
 		var golds = boosters.find(item => item.typeId == 3280);
 		if(!golds) golds = boosters[boosters.push({
-			type: "CandyHardCurrency",
-			category: "candyBooster",
+			type: 'CandyHardCurrency',
+			category: 'candyBooster',
 			typeId: 3280,
 			amount: 0,
 			availability: 2,
@@ -280,11 +284,12 @@ function addGold() {
 
 function toggleCard(event) {
 	var el = event.currentTarget;
-	if(el.nextElementSibling.style.display == 'none') {
-		el.nextElementSibling.style.display = 'block';
+	var dd = el.nextElementSibling;
+	if(dd.style.display == 'none') {
+		dd.style.display = 'block';
 		localStorage.setItem('card_' + el.getAttribute('id'), '1');
 	} else {
-		el.nextElementSibling.style.display = 'none';
+		dd.style.display = 'none';
 		localStorage.setItem('card_' + el.getAttribute('id'), '0');
 	}
 }
