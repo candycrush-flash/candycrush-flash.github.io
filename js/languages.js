@@ -23,7 +23,7 @@ window.languages = {
 			COPY_PROFILE_DATA: 'Copy the exported data',
 			BOOSTER_LIST: 'Enter the booster you want in number: \n\n1. UFO\t\t\t2. Stripe brush\t\t3. Bubblegum troll\n4. Sweet teeth\t\t5. Joker\t\t\t6. Striped and wrapped candies\n7. Bomb cooler\t\t8. Free switch\t\t9. Coconut wheel\n10. Jelly fish\t\t11. Lollipop hammer\t12. Extra moves\n13. Color bomb\t\t14. Extra time\t\t15. Charm of Frozen Time\n16. Charm of Stripes',
 			BOOSTER_AMOUNT_PROMPT: 'How many do you want? (Enter negative to remove)',
-			CHARM_NOTIFY: 'For charm boosters, if already enabled then it will be disabled and vice versa',
+			CHARM_NOTIFY: 'For charm boosters, if already enabled then it will be disabled and vice versa.',
 			GOLDBAR_AMOUNT_PROMPT: 'Enter the number of gold bars to add to your bank (Enter negative to decrease them)',
 			SWITCH_PROFILES: 'Switch Profiles',
 			MANAGE_PROFILES: 'Manage Profiles',
