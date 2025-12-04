@@ -137,6 +137,9 @@ div.alert-bubble {
 	background-image: linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, .2));
 	position: relative;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, .45);
+	display: flex;
+	align-content: center;
+	align-items: center;
 }
 
 body.halloween div.alert-bubble, body.halloween-2015 div.alert-bubble {
@@ -157,8 +160,12 @@ div.alert-bubble:before {
 }
 
 div.alert-bubble img.alert-icon {
-	width: 32px;
-	height: 32px;
+	width: 24px;
+	height: 24px;
+}
+
+div.alert-bubble span.alert-text {
+	margin-left: 8px;
 }
 
 div.alert-bubble img.alert-icon, div.alert-bubble span.alert-text {
