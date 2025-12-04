@@ -393,7 +393,19 @@ function setTheme(theme) {
 	history.go(0);
 }
 
+function isRuffle() {
+    if(window.RufflePlayer) return true;
+    if(document.querySelector('ruffle-player, ruffle-object, ruffle-embed')) return true;
+    const t = navigator.mimeTypes['application/x-shockwave-flash'];
+    if(t && t.enabledPlugin && t.enabledPlugin.filename == 'ruffle.js') return true;
+    return false;
+}
+
 function detectRuffle() {
-	if(window.RufflePlayer)
+	if(isRuffle())
 		document.getElementById('ruffleWarning').style.display = 'flex';
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    detectRuffle();
+});
