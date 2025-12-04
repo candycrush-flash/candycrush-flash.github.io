@@ -395,5 +395,5 @@ function setTheme(theme) {
 
 function detectRuffle() {
 	if(window.RufflePlayer)
-		document.getElementById('ruffleWarning').style.display = 'block';
+		document.getElementById('ruffleWarning').style.display = 'flex';
 }
