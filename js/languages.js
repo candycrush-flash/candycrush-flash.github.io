@@ -59,6 +59,7 @@ window.languages = {
 			THEME_HALLOWEEN: 'Halloween',
 			THEME_HALLOWEEN2015: 'Halloween 2015',
 			THEME_XMAS: 'Christmas',
+			RUFFLE_WARNING: 'Ruffle Flash emulator is detected. This version of Candy Crush Saga may not work on Ruffle.',
 		}
 	},
 	ko: {
@@ -119,6 +120,7 @@ window.languages = {
 			THEME_HALLOWEEN: '할로윈',
 			THEME_HALLOWEEN2015: '할로윈 2015',
 			THEME_XMAS: '성탄절',
+			RUFFLE_WARNING: 'Ruffle 플래시 에뮬레이터가 감지되었습니다. 이 버전은 Ruffle에서 돌아가지 않습니다. 실제 플래시 플레이어를 사용하십시오',
 		}
 	},
 	zh: {
@@ -433,7 +435,7 @@ function getString(key) {
 function initStrings() {
 	var dt, dd, a;
 	var lang = window.languages[getLanguage()] || window.languages.en;
-	document.querySelectorAll('dl dt, dl dd li a, a.link').forEach(el => {
+	document.querySelectorAll('dl dt, dl dd li a, a.link, div.alert-bubble span.alert-text').forEach(el => {
 		el.textContent = getString(el.textContent);
 	});
 	

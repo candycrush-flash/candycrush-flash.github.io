@@ -8,7 +8,12 @@
 		<style id=pageStyle>body { font-family: Tahoma; } dl dd li { font-size: 8pt; }</style>
 	</head>
 
-	<body bgcolor="#ffffff">
+	<body bgcolor=white>
+		<div id=ruffleWarning class=alert-bubble style="display: none;">
+			<img class=alert-icon src="/images/icons/warning.png" />
+			<span class=alert-text>Ruffle Flash emulator detected. While it may work, using real Flash Player is recommended.</span>
+		</div>
+		
 		<table>
 			<tr>
 				<td>
@@ -56,6 +61,6 @@
 			</tr>
 		</table>
 		
-		<script>initCards(); initBackground();</script>
+		<script>initCards(); initBackground(); detectRuffle();</script>
 	</body>
 </html>

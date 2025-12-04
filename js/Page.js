@@ -392,3 +392,8 @@ function setTheme(theme) {
 	localStorage.setItem('theme', theme);
 	history.go(0);
 }
+
+function detectRuffle() {
+	if(window.RufflePlayer)
+		document.getElementById('ruffleWarning').style.display = 'block';
+}
