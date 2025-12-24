@@ -10,7 +10,7 @@ window.languages = {
 		locale: 'en_US',
 		title: 'Candy Crush Saga',
 		ui: {
-			UNLOCK_LEVEL_PROMPT: 'Unlock levels until what level? (1 to 2825) This action is irreversible.',
+			UNLOCK_LEVEL_PROMPT: 'Unlock levels up to which level? (1 to 2825) This action is irreversible.',
 			CHARGE_LIVES_PROMPT: 'Charge all the lives?',
 			EXTEND_LIVES_PROMPT: 'Enter the maximum number of lives.',
 			ENTER_PROFILE_NAME: 'Enter the name of the profile',
