@@ -387,7 +387,7 @@ function initBackground() {
 function initSoundtrack() {
 	var body = document.body;
 	var soundtrack = localStorage.getItem('soundtrack') || 'default';
-	var item = document.querySelector('dd#themeList a.soundtrack-select[data-soundtrack="' + soundtrack + '"]');
+	var item = document.querySelector('dd#soundtrackList a.soundtrack-select[data-soundtrack="' + soundtrack + '"]');
 	item.parentElement.innerHTML = '<b>' + item.textContent + '</b>';
 }
 
