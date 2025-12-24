@@ -384,12 +384,24 @@ function initBackground() {
 	item.parentElement.innerHTML = '<b>' + item.textContent + '</b>';
 }
 
+function initSoundtrack() {
+	var body = document.body;
+	var soundtrack = localStorage.getItem('soundtrack') || 'default';
+	var item = document.querySelector('dd#themeList a.soundtrack-select[data-soundtrack="' + soundtrack + '"]');
+	item.parentElement.innerHTML = '<b>' + item.textContent + '</b>';
+}
+
 function showCredits() {
 	alert('Original game: King\nFlash version archive & offline patch: Enter Pearl (eientei)');
 }
 
 function setTheme(theme) {
 	localStorage.setItem('theme', theme);
+	history.go(0);
+}
+
+function setSoundtrack(theme) {
+	localStorage.setItem('soundtrack', theme);
 	history.go(0);
 }
 

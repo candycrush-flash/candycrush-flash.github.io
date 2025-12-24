@@ -78,6 +78,15 @@
 					</dl>
 					
 					<dl>
+						<dt id=soundtrackCard>SELECT_SOUNDTRACK</dt>
+						<dd id=soundtrackList>
+							<li><a class=soundtrack-select onclick="setSoundtrack('default');" data-soundtrack=default>SOUNDTRACK_DEFAULT</a></li>
+							<li><a class=soundtrack-select onclick="setSoundtrack('mobile');" data-soundtrack=mobile>SOUNDTRACK_MOBILE</a></li>
+							<li><a class=soundtrack-select onclick="setSoundtrack('refresh');" data-soundtrack=refresh>SOUNDTRACK_REFRESH</a></li>
+						</dd>
+					</dl>
+					
+					<dl>
 						<dt id=versionCard>SELECT_VERSION</dt>
 						<dd>
 							<li><a href="2011/">Candy Crush</a></li>
@@ -102,6 +111,6 @@
 			</tr>
 		</table>
 		
-		<script>loadProfiles(); initCards(); initStrings(); loadLanguages(); initDebugMode(); initInfiniteLives(); initInfiniteItems(); initBackground();</script>
+		<script>loadProfiles(); initCards(); initStrings(); loadLanguages(); initDebugMode(); initInfiniteLives(); initInfiniteItems(); initBackground(); initSoundtrack();</script>
 	</body>
 </html>

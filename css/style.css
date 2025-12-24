@@ -51,7 +51,6 @@ dl dt {
 	padding: 6px 10px 3px 10px;
 	color: white;
 	background-image: linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, .2));
-	font-size: 10.5pt;
 	position: relative;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, .45);
 }
@@ -170,4 +169,13 @@ div.alert-bubble span.alert-text {
 
 div.alert-bubble img.alert-icon, div.alert-bubble span.alert-text {
 	display: inline;
+}
+
+body:not([data-version="2017"]) {
+	font-family: Tahoma;
+	font-size: 8pt;
+}
+
+body:not([data-version="2017"]) dl dt {
+	font-size: 9.5pt;
 }

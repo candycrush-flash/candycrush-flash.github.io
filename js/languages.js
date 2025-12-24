@@ -60,6 +60,10 @@ window.languages = {
 			THEME_HALLOWEEN2015: 'Halloween 2015',
 			THEME_XMAS: 'Christmas',
 			RUFFLE_WARNING: 'Ruffle Flash emulator is detected. This version of Candy Crush Saga may not work on Ruffle.',
+			SELECT_SOUNDTRACK: 'Select Soundtrack Set',
+			SOUNDTRACK_DEFAULT: 'Flash Soundtrack',
+			SOUNDTRACK_MOBILE: 'HTML5 Soundtrack',
+			SOUNDTRACK_REFRESH: 'New 2023 Soundtrack',
 		}
 	},
 	ko: {
@@ -121,6 +125,10 @@ window.languages = {
 			THEME_HALLOWEEN2015: '할로윈 2015',
 			THEME_XMAS: '성탄절',
 			RUFFLE_WARNING: 'Ruffle 플래시 에뮬레이터가 감지되었습니다. 이 버전은 Ruffle에서 돌아가지 않습니다. 실제 플래시 플레이어를 사용하십시오',
+			SELECT_SOUNDTRACK: '배경음악 모음 선택',
+			SOUNDTRACK_DEFAULT: '기본 배경음악',
+			SOUNDTRACK_MOBILE: '모바일 버전 배경음악',
+			SOUNDTRACK_REFRESH: '10주년 배경음악',
 		}
 	},
 	zh: {
